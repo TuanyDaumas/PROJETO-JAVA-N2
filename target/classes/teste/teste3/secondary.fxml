@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="451.0" prefWidth="740.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.teste3.SecondaryController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="709.0">
+         <children>
+            <Button fx:id="btnSair" layoutX="586.0" layoutY="303.0" mnemonicParsing="false" onAction="#sair" prefHeight="26.0" prefWidth="58.0" text="Sair" />
+            <Button fx:id="btnEditar2" layoutX="554.0" layoutY="145.0" mnemonicParsing="false" onAction="#setFuncionarioParaEdicao" prefHeight="25.0" prefWidth="122.0" text="Editar" />
+            <Button fx:id="btnExcluir" layoutX="554.0" layoutY="197.0" mnemonicParsing="false" onAction="#excluirFuncionario" prefHeight="25.0" prefWidth="122.0" text="Excluir" />
+            <Button fx:id="btnSalario" layoutX="554.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Aumento Salarial" />
+            <Button fx:id="btnNovo" layoutX="554.0" layoutY="89.0" mnemonicParsing="false" onAction="#switchToCadastro" prefHeight="25.0" prefWidth="122.0" text="Novo Funcionario" />
+            <TableView fx:id="Tabela" layoutY="5.0" prefHeight="386.0" prefWidth="521.0">
+               <columns>
+                  <TableColumn fx:id="colNome" prefWidth="101.59997713565826" text="Nome" />
+                  <TableColumn fx:id="colSalario" prefWidth="89.59996795654297" text="Salário" />
+                  <TableColumn fx:id="colContratacao" prefWidth="83.2000732421875" text="Contratação" />
+                  <TableColumn fx:id="colCargo" prefWidth="84.0" text="Cargo" />
+                  <TableColumn fx:id="colAreaProg" prefWidth="65.60000610351562" text="Habilidade" />
+                  <TableColumn fx:id="colTurno" prefWidth="97.5999755859375" text="Turno" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</VBox>
