@@ -7,18 +7,17 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="451.0" prefWidth="740.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.teste3.SecondaryController">
+<VBox alignment="CENTER" prefHeight="516.0" prefWidth="750.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teste.teste3.SecondaryController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="709.0">
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="710.0">
          <children>
-            <Button fx:id="btnSair" layoutX="586.0" layoutY="303.0" mnemonicParsing="false" onAction="#sair" prefHeight="26.0" prefWidth="58.0" text="Sair" />
-            <Button fx:id="btnEditar2" layoutX="554.0" layoutY="145.0" mnemonicParsing="false" onAction="#setFuncionarioParaEdicao" prefHeight="25.0" prefWidth="122.0" text="Editar" />
-            <Button fx:id="btnExcluir" layoutX="554.0" layoutY="197.0" mnemonicParsing="false" onAction="#excluirFuncionario" prefHeight="25.0" prefWidth="122.0" text="Excluir" />
-            <Button fx:id="btnSalario" layoutX="554.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Aumento Salarial" />
-            <Button fx:id="btnNovo" layoutX="554.0" layoutY="89.0" mnemonicParsing="false" onAction="#switchToCadastro" prefHeight="25.0" prefWidth="122.0" text="Novo Funcionario" />
+            <Button fx:id="btnSair" layoutX="241.0" layoutY="403.0" mnemonicParsing="false" onAction="#sair" prefHeight="26.0" prefWidth="80.0" text="Sair" />
+            <Button fx:id="btnEditar2" layoutX="24.0" layoutY="403.0" mnemonicParsing="false" onAction="#setFuncionarioParaEdicao" prefHeight="25.0" prefWidth="80.0" text="Editar" />
+            <Button fx:id="btnExcluir" layoutX="133.0" layoutY="403.0" mnemonicParsing="false" onAction="#excluirFuncionario" prefHeight="15.0" prefWidth="80.0" text="Excluir" />
+            <Button fx:id="btnSalario" layoutX="541.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Aumento Salarial" />
             <TableView fx:id="Tabela" layoutY="5.0" prefHeight="386.0" prefWidth="521.0">
                <columns>
                   <TableColumn fx:id="colNome" prefWidth="101.59997713565826" text="Nome" />
@@ -29,6 +28,10 @@
                   <TableColumn fx:id="colTurno" prefWidth="97.5999755859375" text="Turno" />
                </columns>
             </TableView>
+            <Button fx:id="btnCarregarxml" layoutX="541.0" layoutY="104.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Carregar XML " />
+            <Button fx:id="btnSalvarxml" layoutX="541.0" layoutY="157.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Salvar XML " />
+            <Button fx:id="btnCarregarJson" layoutX="541.0" layoutY="209.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Carregar JSON " />
+            <Button fx:id="btnSalvarJson" layoutX="541.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Salvar JSON" />
          </children>
       </Pane>
    </children>

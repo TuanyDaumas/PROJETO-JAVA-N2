@@ -14,8 +14,8 @@ import javafx.collections.ObservableList;
 public class Programador extends Funcionario {
     private String areaProg;
 
-    public Programador(String nome, Double salario, Date DataContratacao, ObservableList cargo, String areaProg) {
-        super(nome,salario, DataContratacao, cargo);
+    public Programador(String nome, Double salario, Date dataContratacao, String cargo, String areaProg) {
+        super(nome,salario, dataContratacao, cargo);
         this.areaProg = areaProg;
     }
 

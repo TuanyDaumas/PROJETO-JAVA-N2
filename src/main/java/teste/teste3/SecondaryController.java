@@ -1,17 +1,20 @@
 package teste.teste3;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Optional;
+import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
-public class SecondaryController {
-    // Componentes gráficos correspondentes aos dados do funcionário
+public class SecondaryController{
+    /*// Componentes gráficos correspondentes aos dados do funcionário
     @FXML
     private TextField txtNome; //campo de texto
     @FXML
@@ -23,13 +26,13 @@ public class SecondaryController {
     @FXML
     private TextField txtAreaProg; //campo de texto
     @FXML
-    private TextField txTurno; //campo de texto
+    private TextField txTurno; //campo de texto */
     @FXML
     Button btnSair; //botão Sair
     @FXML
     Button btnEditar2; 
      
-    // Lista de Funcionários
+    /*// Lista de Funcionários
     private final ArrayList<Funcionario> listaFunc;
    
     //funcionário selecionado para edição
@@ -55,7 +58,7 @@ public class SecondaryController {
             listaFunc.remove(funcionarioEmEdicao);
             
         }
-    }
+    }*/
 
     @FXML //Método associado ao botão "Sair"
     private void sair () throws IOException { 
@@ -64,7 +67,7 @@ public class SecondaryController {
             // Fecha a tela secundária após excluir
             switchToPrimary();
             //System.exit(0);
-    }
+    } 
     
     @FXML
     private void switchToPrimary() throws IOException {

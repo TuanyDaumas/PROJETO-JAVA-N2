@@ -15,14 +15,18 @@ public class GerenteExecutivo extends Funcionario {
     private double bonus;
     private double coparticipacao;
 
-    public GerenteExecutivo(String nome, Double salario, Date DataContratacao, ObservableList cargo, double bonus,double coparticipacao ) {
-        super(nome,salario, DataContratacao, cargo);
+    public GerenteExecutivo(String nome, Double salario, Date dataContratacao, String cargo, double bonus,double coparticipacao ) {
+        super(nome,salario, dataContratacao, cargo);
         this.bonus = 0.0;
         this.coparticipacao = 0.0;
     }
 
     public void setBonus(double bonus) {
         this.bonus = bonus;
+    }
+   
+    public Double  getBonus() {
+        return bonus;
     }
 
     public void setcoparticipacao(double coparticipacao) {

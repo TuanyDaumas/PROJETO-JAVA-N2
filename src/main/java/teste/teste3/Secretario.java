@@ -14,8 +14,8 @@ import javafx.collections.ObservableList;
 public class Secretario extends Funcionario {
     private  int turno; // 1 - manhã, 2 - tarde, 3 - noite
 
-    public Secretario(String nome, Double salario, Date DataContratacao, ObservableList cargo, int turno) {
-        super(nome,salario, DataContratacao, cargo);
+    public Secretario(String nome, Double salario, Date dataContratacao, String cargo, int turno) {
+        super(nome,salario, dataContratacao, cargo);
         this.turno = turno;
     }
 

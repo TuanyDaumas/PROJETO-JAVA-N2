@@ -15,8 +15,8 @@ public class GerenteGeral extends Funcionario {
     private double bonus;
    
 
-    public GerenteGeral(String nome, Double salario, Date DataContratacao, ObservableList cargo, double bonus) {
-        super(nome,salario, DataContratacao, cargo);
+    public GerenteGeral(String nome, Double salario, Date dataContratacao, String cargo, double bonus) {
+        super(nome,salario, dataContratacao, cargo);
         this.bonus = 0.0;
     }
 
@@ -24,6 +24,9 @@ public class GerenteGeral extends Funcionario {
         this.bonus = bonus;
     }
     
+    public Double getBonus() {
+        return bonus;
+    } 
 
     @Override
     public Double getSalario() {

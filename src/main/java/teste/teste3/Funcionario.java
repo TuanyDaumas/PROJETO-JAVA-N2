@@ -7,8 +7,6 @@ package teste.teste3;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import javafx.collections.ObservableList;
-
 /**
  *
  * @author Tuany
@@ -16,20 +14,18 @@ import javafx.collections.ObservableList;
 public class Funcionario {
     private String nome;
     private Double salario;
-    private Date DataContratacao;
-    private ObservableList<String> cargo;
+    private Date dataContratacao;
+    private String cargo;
     private String FuncionarioParaEdicao;
-    //private final int matricula;
     
     // Lista estática para armazenar todos os funcionários
     private static List<Funcionario> ListaFunc = new ArrayList<>();
  
-    public Funcionario(String nome, Double salario, Date DataContratacao, ObservableList<String> cargo) {
+    public Funcionario(String nome, Double salario, Date dataContratacao, String cargo) {
         this.nome = nome;
         this.salario = salario;
         this.cargo = cargo;
-       this.DataContratacao = DataContratacao;
-        //this.matricula = matricula;
+        this.dataContratacao = dataContratacao;
         
         // Adiciona o funcionário à lista quando é criado
         ListaFunc.add(this);
@@ -44,22 +40,6 @@ public class Funcionario {
         this.nome = nome;
     }
     
-    public String getFuncionarioParaEdicao() {
-        return FuncionarioParaEdicao;
-    }
-    
-    public void setFuncionarioParaEdicao(String FuncionarioParaEdicao) {
-        this.FuncionarioParaEdicao = FuncionarioParaEdicao;
-    }
-
-    //public int getMatricula() {
-        //return matricula;
-   // }
-
-    //public void setMatricula(int matricula) {
-        //this.matricula = matricula;
-    //}
-    
  public Double getSalario() {
         return salario;
     }
@@ -69,22 +49,21 @@ public class Funcionario {
     }
  
  public Date getDataContratacao() {
-        return DataContratacao;
+        return dataContratacao;
     }
  
  public void setDataContratacao(Date DataContratacao) {
-        this.DataContratacao = DataContratacao;
+        this.dataContratacao = DataContratacao;
     }
-
     
-    
-     public ObservableList getCargo() {
+     public String getCargo() {
         return cargo;
     }
 
-    public void setCargo(ObservableList Cargo) {
+    public void setCargo(String Cargo) {
         this.cargo = Cargo;
     }
+    
     //método para aumento salarial 
     public void aumentoSalarial(double aumento) {
        salario += aumento;
@@ -93,5 +72,13 @@ public class Funcionario {
     // Método estático para obter a lista de funcionários
     public static List<Funcionario> getListaFunc() {
         return ListaFunc;
+    }
+
+    Object getareaProg() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    Object getturno() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

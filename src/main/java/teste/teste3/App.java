@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 
 /**
@@ -18,7 +20,9 @@ import javafx.scene.control.Alert;
 public class App extends Application { //Veja que a aplicação é no geral associada à uma Application, invocada na main. Lembrar da organização de interface JavaFX: Application < Scene < componentes de interface desejados (botões, labels, etc).
 
     private static Scene scene;
-
+    
+    private final ObservableList<Funcionario> listaFuncionarios = FXCollections.observableArrayList();
+    
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("primary")); //instancia Scene associando chamada ao arquivo de interface fxml principal, chamando-a no método loadFXML
@@ -38,20 +42,5 @@ public class App extends Application { //Veja que a aplicação é no geral asso
     public static void main(String[] args) {
         launch(); //por default, invoca o método start acima para gerar uma Scene na Application corrente
     }
-    
-    // salvar um ArrayList de objetos Funcionario em um arquivo. 
-    public static void salvarFuncionariosEmArquivo(ArrayList<Funcionario> listaFunc, String caminho, String nomeArquivo) {
-    //O método recebe três parâmetros: listaFunc contendo objetos Funcionario a serem salvos, caminho é o caminho do diretório onde o arquivo será salvo, e nomeArquivo é o nome do arquivo a ser criado.
-    try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(caminho + "/" + nomeArquivo))) {
-        oos.writeObject(listaFunc); //usado para gravar objetos no arquivo 
-        //oos.writeObject(listaFunc): escreve o objeto listaFunc no arquivo.
-        System.out.println("Dados salvos com sucesso no arquivo: " + caminho + "/" + nomeArquivo);
-    } catch (IOException e) { //mensagem indicando que os dados foram salvos com sucesso, juntamente com o caminho e nome do arquivo.
-        Alert msg_erro = new Alert(Alert.AlertType.ERROR);
-        msg_erro.setTitle("Reportando Erro");
-        msg_erro.setHeaderText("Erro ao salvar dados em arquivo");
-        msg_erro.setContentText("Tente novamente");
-        msg_erro.showAndWait();
-    }
-}
+
 }
